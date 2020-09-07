@@ -164,3 +164,25 @@ td:last-of-type {
     padding: 1em;
     opacity: 0;
 }
+
+.controls {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.control {
+    display: flex;
+    align-items: center;
+    font-size: 0.5rem;
+}
+
+.key {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 125px;
+    margin-right: 1em;
+    padding: 0.25em 0.5em;
+    font-size: 0.75rem;
+}
