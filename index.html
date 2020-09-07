@@ -4,22 +4,297 @@
         <title>A JS Talk</title>
         <link rel="stylesheet" href="index.css">
         <script src="index.js" async></script>
+        <meta charset="utf-8">
     </head>
     <body>
-        <section id="slide-1">
+        <section>
             <h1>Hello!</h1>
         </section>
-        <section id="slide-2">
-            <h1>I am Sandeep</h1>
+        <section>
+            <h1>Playfair</h1>
+            <h3>A design system for data visualization</h3>
+            <figure>
+                <img src="/assets/DataViz.png" alt="Visualization of a Social Network">
+                <figcaption>
+                    <small>
+                        Image credit: <a href="https://commons.wikimedia.org/wiki/File:Social_Network_Analysis_Visualization.png">wikimedia</a>
+                    </small>
+                </figcaption>
+            </figure>
         </section>
-        <section id="slide-3">
-            <h1>I am Sandeep</h1>
+        <section>
+            <h1>A little bit of background</h1>
         </section>
-        <section id="slide-4">
-            <h1>I am Sandeep</h1>
+        <section>
+            <h1>Storybooks!</h1>
+            <video pause autoplay muted loop playsinline alt="Storybook demo video">
+                <source src="//storybook.js.org//videos/storybook-hero-video-optimized.mp4" type="video/mp4">
+            </video>
+            <p>Video Credit: <a href="https://storybook.js.org" rel="noreferrer noopener">storybook.js.org</a></p>
+            <script>
+                {
+                    'use strict';
+                    const video = document.querySelector('video');
+                    const ioCb = (ioEntry) => {
+                        const entry = ioEntry.shift();
+                        if (entry && entry.intersectionRatio > 0) {
+                            entry.target.play();
+                        } else {
+                            entry.target.pause();
+                        }
+                    };
+                    const io = new IntersectionObserver(ioCb);
+                    io.observe(video);
+                    video.pause();
+                }
+            </script>
         </section>
-        <section id="slide-5">
-            <h1>I am Sandeep</h1>
+        <section>
+            <h1>Idea 💡</h1>
+            <h3>Runtime configurations through a storybook like UI</h3>
+        </section>
+        <section>
+            <h1>A quick demo</h1>
+        </section>
+        <section>
+            <h1>The life of a Data Table</h1>
+            <div class="life-of-a-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section>
+            <h1>The life of a Data Table</h1>
+            <div class="life-of-a-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table>
+                    <thead>
+                        <th>Fruit</th>
+                        <th>Cost / kG</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>fgjh</td>
+                            <td>₹2,400</td>
+                        </tr>
+                        <tr>
+                            <td>asfd</td>
+                            <td>₹4,400</td>
+                        </tr>
+                        <tr>
+                            <td>adfj</td>
+                            <td>₹6,400</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section>
+            <h1>The life of a Data Table</h1>
+            <div class="life-of-a-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table>
+                    <thead>
+                        <th>Fruit</th>
+                        <th>Cost / kG</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>fgjh</td>
+                            <td>₹2,400</td>
+                        </tr>
+                        <tr>
+                            <td>asfd</td>
+                            <td>₹4,400</td>
+                        </tr>
+                        <tr>
+                            <td>adfj</td>
+                            <td>₹6,400</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table>
+                    <thead>
+                        <th>Fruit</th>
+                        <th>Cost / kG</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>🍎</td>
+                            <td>₹189.56</td>
+                        </tr>
+                        <tr>
+                            <td>🍊</td>
+                            <td>₹65.45</td>
+                        </tr>
+                        <tr>
+                            <td>🍇</td>
+                            <td>₹80.24</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section>
+            <h1>So, what's under the hood?</h1>
+            <h3>Playfair Infra</h3>
+        </section>
+        <section class="infra">
+            <div class="box one">
+                1. Playfair Core
+            </div>
+            <div class="box-hidden two"></div>
+            <div class="box-hidden three"></div>
+            <div class="box-hidden four"></div>
+            <div class="box-hidden five"></div>
+            <div class="box-hidden six"></div>
+        </section>
+        <section class="infra">
+            <div class="box one">
+                1. Playfair Core
+            </div>
+            <div class="box two">
+                2. CDN
+            </div>
+            <div class="box-hidden three"></div>
+            <div class="box-hidden four"></div>
+            <div class="box-hidden five"></div>
+            <div class="box-hidden six"></div>
+        </section>
+        <section class="infra">
+            <div class="box one">
+                1. Playfair Core
+            </div>
+            <div class="box two">
+                2. CDN
+            </div>
+            <div class="box three">
+                3. Shared Manifest Service
+            </div>
+            <div class="box-hidden four"></div>
+            <div class="box-hidden five"></div>
+            <div class="box-hidden six"></div>
+        </section>
+        <section class="infra">
+            <div class="box one">
+                1. Playfair Core
+            </div>
+            <div class="box two">
+                2. CDN
+            </div>
+            <div class="box three">
+                3. Shared Manifest Service
+            </div>
+            <div class="box four">
+                4. Playfair Admin Console
+            </div>
+            <div class="box-hidden five"></div>
+            <div class="box-hidden six"></div>
+        </section>
+        <section class="infra">
+            <div class="box one">
+                1. Playfair Core
+            </div>
+            <div class="box two">
+                2. CDN
+            </div>
+            <div class="box three">
+                3. Shared Manifest Service
+            </div>
+            <div class="box four">
+                4. Playfair Admin Console
+            </div>
+            <div class="box five">
+                5. Playfair Service
+            </div>
+            <div class="box-hidden six"></div>
+        </section>
+        <section class="infra">
+            <div class="box one">
+                1. Playfair Core
+            </div>
+            <div class="box two">
+                2. CDN
+            </div>
+            <div class="box three">
+                3. Shared Manifest Service
+            </div>
+            <div class="box four">
+                4. Playfair Admin Console
+            </div>
+            <div class="box five">
+                5. Playfair Service
+            </div>
+            <div class="box six">
+                6. Browser
+            </div>
+        </section>
+        <section>
+            <h1>Leveraging Platform Capabilities</h1>
+        </section>
+        <section>
+            <h1>Web Components</h1>
+        </section>
+        <section>
+            <h1>ESM Modules & Dynamic import</h1>
+        </section>
+        <section>
+            <h1>Web Components ♥️ React</h1>
+            <h3>A topic for another day...</h3>
+        </section>
+        <section>
+            <h1>Sandeep Kumar</h1>
+            <h3><a href="mailto: sandeep.kc@flipkart.com">sandeep.kc@flipkart.com</a></h3>
         </section>
     </body>
 </html>

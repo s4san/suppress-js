@@ -15,23 +15,24 @@ html {
 }
 
 body {
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: Monaco, 'Helvetica Neue', sans-serif;
     background: radial-gradient(rgba(63,76,119,1), rgba(32,38,57,1));
     color: white;
 
     height: 100vh;
+    width: 100vw;
     margin: 0;
     padding: 0;
 
     overflow-x: hidden;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
 }
 
 section {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
 
     display: flex;
     align-items: center;
@@ -44,6 +45,7 @@ section {
 
 h1 {
     font-size: 4rem;
+    margin-bottom: 2em;
 }
 
 h2 {
@@ -65,4 +67,100 @@ h5, h6, p {
 h1, h2, h3, h4, h5, h6, p {
     font-weight: normal;
     margin: 0;
+}
+
+video, img {
+    object-fit: contain;
+    max-height: 70vh;
+}
+
+a,
+a:hover,
+a:focus,
+a:visited {
+    color: inherit;
+}
+
+.life-of-a-table {
+    display: inline-grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 2em;
+    padding: 3em;
+    width: 100%;
+    min-height: 400px;
+}
+
+table, th, td {
+    border: 1px solid white;
+    border-collapse: collapse;
+    font-size: 1.25rem;
+    padding: 1em;
+    min-width: 12ch;
+}
+
+th {
+    text-align: center;
+}
+
+td:first-of-type {
+    text-align: left;
+}
+
+td:last-of-type {
+    text-align: right;
+}
+
+.infra {
+    display: grid;
+    grid-template-areas:
+        ". two . . ."
+        "one . four five six"
+        ". three . . .";
+    gap: 2em;
+    align-items: center;
+}
+
+.one {
+    grid-area: one;
+}
+
+.two {
+    grid-area: two;
+}
+
+.three {
+    grid-area: three;
+}
+
+.four {
+    grid-area: four;
+}
+
+.five {
+    grid-area: five;
+}
+
+.six {
+    grid-area: six;
+}
+
+.box {
+    border: 1px solid white;
+    width: 250px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+}
+
+.box-hidden {
+    border: 1px solid white;
+    width: 250px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    opacity: 0;
 }
