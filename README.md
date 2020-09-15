@@ -1,2 +1,2 @@
 # suppress-js
-JS Presentation Framework - As I Like It
+NO JS (ok, maybe a little) Presentation Framework - As I Like It
